@@ -4,7 +4,11 @@
   "description": "Retrieve fantasy data from espn.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rynobax/espn-fantasy-football.git"
   },
   "keywords": [
     "espn",
@@ -12,7 +16,7 @@
     "football"
   ],
   "author": "Ryan Baxley",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2"
