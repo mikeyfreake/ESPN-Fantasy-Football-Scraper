@@ -1,4 +1,6 @@
 # espn-fantasy-football
+###An Node.js package for scraping data from ESPN's fantasy football leagues.
+
 ## Editing
 1. Clone or fork the repository
 2. Ensure you can use make (https://github.com/bmatzelle/gow)
