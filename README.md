@@ -1,5 +1,5 @@
 # espn-fantasy-football
-###An Node.js package for scraping data from ESPN's fantasy football leagues.
+###A Node.js package for scraping data from ESPN's fantasy football leagues.
 
 ## Editing
 1. Clone or fork the repository
