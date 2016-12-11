@@ -1,4 +1,4 @@
-# espn-fantasy-football
+# espn-ff-league-scraper
 ### A Node.js package for scraping data from ESPN's fantasy football leagues.
 
 ## Installation
