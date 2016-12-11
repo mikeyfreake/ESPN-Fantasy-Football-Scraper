@@ -1,9 +1,7 @@
 # espn-fantasy-football
 ### A Node.js package for scraping data from ESPN's fantasy football leagues.
 
-## Usage
-
-### Installation
+## Installation
 
 You can install using [npm](https://www.npmjs.com/package/node-schedule).
 ```
@@ -22,14 +20,14 @@ const league = espnff.league(1829677);
 ```
 Trying to get info about an invalid or private league will result in rejected promises.
 
-### Getting info about the league
+## Getting info about the league
 The info functions return promises
 ```
 league.getLeagueName().then(res => console.log('League name is: ' + res));
 ```
 but right now there is only one.  Coming soon will be league information like roster size and scoring type.
 
-### Get scores
+## Get scores
 Functions will return scoreboards, which contains information about the teams listed below
 ```
 /**
@@ -48,7 +46,7 @@ Functions will return scoreboards, which contains information about the teams li
  */
 ```
 
-#### getWeek(year, week)
+### getWeek(year, week)
 ```
 /**
  * Gets the indicated week
@@ -62,7 +60,7 @@ league.getWeek(2016, 8);
 ```
 getWeek() returns an array of scoreboards, one for each team.
 
-#### getWeeks(startWeek, endWeek, year)
+### getWeeks(startWeek, endWeek, year)
 ```
 /**
  * Get scoreboards for multiple weeks
@@ -76,7 +74,7 @@ league.getWeeks(1, 5, 2016);
 ```
 getWeeks() returns an array with an entry for each week in the interval.  Each week's entry is an array of scoreboards, one for each team.
 
-#### getCurrentSeason()
+### getCurrentSeason()
 ```
 /**
  * Gets all the completed scoreboards from the current season
