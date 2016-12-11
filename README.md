@@ -27,6 +27,7 @@ The info functions return promises
 ```
 league.getLeagueName().then(res => console.log('League name is: ' + res));
 ```
+but right now there is only one.  Coming soon will be league information like roster size and scoring type.
 
 ### Get scores
 Functions will return scoreboards, which contains information about the teams listed below
@@ -59,6 +60,7 @@ Functions will return scoreboards, which contains information about the teams li
  
 league.getWeek(2016, 8);
 ```
+getWeek() returns an array of scoreboards, one for each team.
 
 #### getWeeks(startWeek, endWeek, year)
 ```
@@ -72,6 +74,7 @@ league.getWeek(2016, 8);
 
 league.getWeeks(1, 5, 2016);
 ```
+getWeeks() returns an array with an entry for each week in the interval.  Each week's entry is an array of scoreboards, one for each team.
 
 #### getCurrentSeason()
 ```
@@ -82,6 +85,7 @@ league.getWeeks(1, 5, 2016);
  
 league.getCurrentSeason();
 ```
+getCurrentSeason() returns an array with an entry for each week in the season so far.  Each week's entry is an array of scoreboards, one for each team.
 
 ## Contributing
 1. Clone or fork the repository
