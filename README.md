@@ -92,4 +92,4 @@ league.getCurrentSeason();
 5. Make sure your changes pass all tests (npm test)
 6. Submit a pull request
 
-(Testing will require you to have the command line command 'make'.  If on windows, look at https://github.com/bmatzelle/gow)
+(Testing will require you to have the command line command 'make'.  If on Windows, look at https://github.com/bmatzelle/gow)
