@@ -1,5 +1,5 @@
 {
-  "name": "espn-ff-league-scrape",
+  "name": "espn-ff-league-scraper",
   "version": "0.0.1",
   "description": "Retrieve public fantasy football league data from espn.",
   "main": "index.js",
