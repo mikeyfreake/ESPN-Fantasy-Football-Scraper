@@ -1,7 +1,7 @@
 {
-  "name": "espn-fantasy-football",
-  "version": "0.0.0",
-  "description": "Retrieve fantasy data from espn.",
+  "name": "espn-ff-league-scrape",
+  "version": "0.0.1",
+  "description": "Retrieve public fantasy football league data from espn.",
   "main": "index.js",
   "scripts": {
     "test": "make test"
