@@ -1,7 +1,89 @@
 # espn-fantasy-football
-###A Node.js package for scraping data from ESPN's fantasy football leagues.
+### A Node.js package for scraping data from ESPN's fantasy football leagues.
 
-## Editing
+## Usage
+
+### Installation
+
+You can install using [npm](https://www.npmjs.com/package/node-schedule).
+```
+npm install node-schedule
+```
+Include the package
+```
+const espnff = require('espn-fantasy-football');
+```
+Create a reference to a league
+```
+// 1829677 is the id of a league
+// It can be found in the url of your fantasy clubhouse:
+// ?leagueId=1829677
+const league = espnff.league(1829677);
+```
+Trying to get info about an invalid or private league will result in rejected promises.
+
+### Getting info about the league
+The info functions return promises
+```
+league.getLeagueName().then(res => console.log('League name is: ' + res));
+```
+
+### Get scores
+Functions will return scoreboards, which contains information about the teams listed below
+```
+/**
+ * @typedef Scoreboard
+ * @property {string} teamName
+ * @property {string} abbreviation
+ * @property {string} points
+ * @property {string} owners
+ * @property {number} wins
+ * @property {number} losses
+ * @property {number} draws
+ * @property {number} opponentIndex - Index of opponent within the array
+ * @property {number} opponentId - Id of opponent
+ * @property {number} result - 1: win, 0: draw, -1: loss
+ * @property {number} teamId - A unique id for this team, consistant across weeks
+ */
+```
+
+#### getWeek(year, week)
+```
+/**
+ * Gets the indicated week
+ * @param {number} [year] - The year to use
+ * @param {number} [week] - If not provided, gets current week's scores
+ * @return {promise<Scoreboard[]|Error>} - An array containing all the
+ *                                          scoreboards for that week.
+ */
+ 
+league.getWeek(2016, 8);
+```
+
+#### getWeeks(startWeek, endWeek, year)
+```
+/**
+ * Get scoreboards for multiple weeks
+ * @param {string} startWeek - The week to start from (inclusive)
+ * @param {string} endWeek - The week to end on (inclusive)
+ * @param {string} [year] - The year we are working in
+ * @return {promise<ScoreBoard[][]>}
+ */
+
+league.getWeeks(1, 5, 2016);
+```
+
+#### getCurrentSeason()
+```
+/**
+ * Gets all the completed scoreboards from the current season
+ * @return {promise<Scoreboard[][]|Error>}
+ */
+ 
+league.getCurrentSeason();
+```
+
+## Contributing
 1. Clone or fork the repository
 2. Ensure you can use the command line command 'make' (https://github.com/bmatzelle/gow)
 3. Make changes
