@@ -3,9 +3,9 @@
 
 ## Installation
 
-You can install using [npm](https://www.npmjs.com/package/node-schedule).
+You can install using [npm](https://www.npmjs.com/package/espn-ff-league-scraper).
 ```
-npm install node-schedule
+npm install espn-ff-league-scraper
 ```
 Include the package
 ```
