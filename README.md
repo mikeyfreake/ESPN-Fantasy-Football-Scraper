@@ -9,7 +9,7 @@ npm install espn-ff-league-scraper
 ```
 Include the package
 ```
-const espnff = require('espn-fantasy-football');
+const espnff = require('espn-ff-league-scraper');
 ```
 Create a reference to a league
 ```
